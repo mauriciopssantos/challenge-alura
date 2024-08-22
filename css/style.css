@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root{
+    --primary-color:#ffeddf;
+    --secondary-color:#0d1321;
+    --tertiary-color:#c5d86d;
+    font-size: 20px;
+}
+
+body{
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+header{
+    background-color: var(--tertiary-color);
+    position: sticky;
+    top: 0;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+footer{
+    background-color: var(--secondary-color);
+    color: var(--tertiary-color);
+    border-top: 2px solid var(--tertiary-color);
+}
+
+main{
+    color: #ffeddf;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+}
+
+h1, h2, h3, h4, h5, h6, a{
+    font-family: "Black Ops One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+a{
+    text-decoration: underline;
+    color: #0d1321;
+}
+
+.logo{
+    width: 3.75rem;
+    height: 3.75rem;
+}
+
+.top__navBar{
+    display: flex;
+    justify-content: space-between;
+}
+
+.top__navBar__list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 2rem;
+}
+
+.top__navBar__link {
+    text-decoration: none;
+    font-size: smaller;
+    color: #0d1321;
+    position: relative;
+    margin: 0 2rem;
+}
+
+.top__navBar__link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Ajuste conforme necessário */
+    width: 100%;
+    height: 1px; /* Espessura da linha */
+    background-color: currentColor;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.top__navBar__link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.top__navBar__link:hover {
+    color: #0d1321b9;
+    cursor: pointer;
+}
+
+.main__container{
+    display: flex;
+    margin: 0 2rem;
+    letter-spacing: 1px;
+    line-height: 2rem;  
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.main__title{
+    font-size:3.5rem;
+    -webkit-text-stroke: 1.5px #c5d86d;
+    display: flex;
+    color: #0d1321;
+ }
+ .main__subtitle{
+    line-height: 1rem;
+    padding-top: 1rem;
+ }
+
+ .main__image{
+    width: 25%;
+    border-radius: 50%;
+    padding: 1rem;
+    border: 2px solid #c4d86d;    
+}
+
+.main__article{
+    text-align: end;
+    font-size:1.5rem;
+    line-height: 1.5rem;
+    -webkit-text-stroke: 1.5px #c5d86d;
+    color: #0d1321;
+    font-weight: 400;
+    font-family:"Black Ops One", system-ui;
+}
+
+.main__links{
+    color: #c5d86d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+.main__links__container{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.main__links__link{
+    color: #c5d86d;
+    font-size: larger;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    text-decoration: none;
+    width: auto;
+    background-color:#0d1321;
+    transition: 1s;
+    border-bottom: 2px solid #c5d86d;
+    
+}
+
+.main__links__link:hover{
+    background-color:#c4d86d;
+    -webkit-text-stroke: 1.5px #0d1321;
+}
+
+.footer__navBar{
+    display: flex;
+    justify-content: center;
+}
+
+.footer__span{
+    font-family: "Black Ops One", system-ui;
+    font-weight: 400;
+    font-size: 1rem;
+    min-height: 1.5rem;
+    margin-top: 0.5rem;
+    font-size: smaller;
+}
+
+@media (max-width: 1200px){
+    .main__container{
+        margin-top: 1rem;
+        flex-direction: column;
+    }
+    .main__container__text{
+        text-align: center;
+    }
+    .main__article{
+        text-align: center;
+    }
+}
+
+@media (max-width: 800px){
+    .main__container{
+        margin: 2%;
+    }
+
+    .main__links__container{
+        flex-direction: column;
+    }
+    .main__image{
+        width: 50%;
+    }
+}
+
+@media (max-width:480px){
+
+}
+
+
+
+
