@@ -4,28 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Challenge Alura | Mauricio V.1</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/script.js" defer></script>
 </head>
 <body>
     <header>
         <nav class="top__navBar">
-            <a class="logo" href="index.html" target="_blank" rel="noopener"><img src="assets/img/" alt="" srcset=""></a>
+            <a class="logo" href="../index.html" rel="noopener"><img src="../assets/img/logo-footer-background.png" alt="Mauricio's logo" srcset=""></a>
             <ul class="top__navBar__list">
-                <li><a class=".top__navBar__link" href="views/version-one.html" target="_blank" rel="noopener">Decipher V.1</a></li>
-                <li><a class=".top__navBar__link" href="views/version-two.html" target="_blank" rel="noopener">Decipher V.2</a></li>
+                <li><a class="top__navBar__link" href="version-one.html" target="_blank" rel="noopener">Decipher v.1</a></li>
+                <li><a class="top__navBar__link" href="version-two.html" target="_blank" rel="noopener">Decipher v.2</a></li>
             </ul>
         </nav>
     </header>
     <main class="main__container">
-        <section>
-            <div><input type="text" name="" id=""></div>
-            <div class="main__buttons">
-                <button id="encrypt" type="button"></button>
-                <button id="decrypt" type="button"></button>
+        <form class="main__form" action="">
+            <div>
+                <label for="decrypted__text"></label>
+                <textarea class="textbox" id="decrypted__text" name="decrypted__text" placeholder="Enter a message to start encrypting."></textarea>
             </div>
-        </section>
-        <aside>
-
+            <div class="main__buttons">
+                <button class="main__buttons__button" type="button" id="encrypt">Encrypt</button>
+                <button class="main__buttons__button" type="button" id="decrypt">Decrypt</button>
+            </div>
+        </form>            
+        <aside class="side__container">
+            <label for="encrypted__text"></label>
+            <textarea class="textbox" id="encrypted__text" name="encrypted__text" placeholder="No message found"></textarea>
         </aside>
     </main>
+    <footer class="footer__navBar">
+        <span class="footer__span">All rights reserved to Mauricio Peregrino</span>
+    </footer>
 </body>
 </html>

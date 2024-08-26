@@ -3,7 +3,8 @@
 :root{
     --primary-color:#ffeddf;
     --secondary-color:#0d1321;
-    --tertiary-color:#c5d86d;
+    --tertiary-color:#c4d86d;
+    --quartenary-color:#c4d86d8b;
     font-size: 20px;
 }
 
@@ -48,7 +49,7 @@ a{
     color: #0d1321;
 }
 
-.logo{
+.logo img{
     width: 3.75rem;
     height: 3.75rem;
 }
@@ -56,13 +57,13 @@ a{
 .top__navBar{
     display: flex;
     justify-content: space-between;
+    padding: 0 1rem;
 }
 
 .top__navBar__list{
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin: 0 2rem;
+    gap: 1rem;
 }
 
 .top__navBar__link {
@@ -70,16 +71,15 @@ a{
     font-size: smaller;
     color: #0d1321;
     position: relative;
-    margin: 0 2rem;
 }
 
 .top__navBar__link::after {
     content: '';
     position: absolute;
     left: 0;
-    bottom: -2px; /* Ajuste conforme necessário */
+    bottom: -2px; 
     width: 100%;
-    height: 1px; /* Espessura da linha */
+    height: 1px; 
     background-color: currentColor;
     transform: scaleX(0);
     transform-origin: right;
@@ -97,70 +97,74 @@ a{
 }
 
 .main__container{
-    display: flex;
-    margin: 0 2rem;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    margin: 2rem;
     letter-spacing: 1px;
     line-height: 2rem;  
-    align-items: center;
-    justify-content: center;
     gap: 1rem;
+    height: 100vh;
 }
 
 .main__title{
     font-size:3.5rem;
-    -webkit-text-stroke: 1.5px #c5d86d;
+    -webkit-text-stroke: 1.5px var(--tertiary-color);
     display: flex;
-    color: #0d1321;
- }
+    color:var(--secondary-color);
+}
+
  .main__subtitle{
     line-height: 1rem;
-    padding-top: 1rem;
- }
-
- .main__image{
-    width: 25%;
-    border-radius: 50%;
-    padding: 1rem;
-    border: 2px solid #c4d86d;    
+    padding-top: 1.5rem;
+    color: var(--tertiary-color);   
+    font-size: 2rem;
 }
 
-.main__article{
-    text-align: end;
-    font-size:1.5rem;
-    line-height: 1.5rem;
-    -webkit-text-stroke: 1.5px #c5d86d;
-    color: #0d1321;
-    font-weight: 400;
-    font-family:"Black Ops One", system-ui;
+.main__paragraph{
+    padding-top: 2rem;
+    font-size: 1rem;
+    line-height: 1.25rem;
 }
 
-.main__links{
+.textbox{
+        width: 100%;
+        height: 65vh;
+        padding: 12px 20px;
+        box-sizing: border-box;
+        border: 2px solid var(--tertiary-color);
+        border-radius: 4px;
+        background-color: var(--quartenary-color);
+        font-size: 16px;
+        resize: none;
+        color: var(--secondary-color);
+}
+
+.textbox::placeholder{
+    color: var(--secondary-color);
+}
+
+.main__buttons {
     color: #c5d86d;
     display: flex;
-    flex-direction: column;
     align-items: center;
     gap: 1rem;
     margin: 1.5rem 0;
 }
-.main__links__container{
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-}
-.main__links__link{
+
+.main__buttons__button {
     color: #c5d86d;
     font-size: larger;
     padding: 0.5rem;
     margin: 0.5rem;
     text-decoration: none;
     width: auto;
-    background-color:#0d1321;
+    background-color: #0d1321;
     transition: 1s;
     border-bottom: 2px solid #c5d86d;
-    
 }
 
-.main__links__link:hover{
+
+.main__buttons__button:hover{
     background-color:#c4d86d;
     -webkit-text-stroke: 1.5px #0d1321;
 }
@@ -179,35 +183,6 @@ a{
     font-size: smaller;
 }
 
-@media (max-width: 1200px){
-    .main__container{
-        margin-top: 1rem;
-        flex-direction: column;
-    }
-    .main__container__text{
-        text-align: center;
-    }
-    .main__article{
-        text-align: center;
-    }
-}
-
-@media (max-width: 800px){
-    .main__container{
-        margin: 2%;
-    }
-
-    .main__links__container{
-        flex-direction: column;
-    }
-    .main__image{
-        width: 50%;
-    }
-}
-
-@media (max-width:480px){
-
-}
 
 
 
