@@ -13,20 +13,21 @@
         <nav class="top__navBar">
             <a class="logo" href="../index.html" rel="noopener"><img src="../assets/img/logo-footer-background.png" alt="Mauricio's logo" srcset=""></a>
             <ul class="top__navBar__list">
-                <li><a class="top__navBar__link" href="version-one.html" target="_blank" rel="noopener">Decipher v.1</a></li>
-                <li><a class="top__navBar__link" href="version-two.html" target="_blank" rel="noopener">Decipher v.2</a></li>
+                <li><a class="top__navBar__link" href="version-one.html" target="_blank" rel="noopener">Decipher</a></li>
             </ul>
         </nav>
     </header>
-    <main class="main__container">
+    <main class="main__container__decipher">
         <form class="main__form" action="">
             <div>
                 <label for="decrypted__text"></label>
                 <textarea class="textbox" id="decrypted__text" name="decrypted__text" placeholder="Enter a message to start encrypting."></textarea>
             </div>
+            <div class="validation"><p>We only accept lowercase letters and no special characters.</p></div>
             <div class="main__buttons">
                 <button class="main__buttons__button" type="button" id="encrypt">Encrypt</button>
                 <button class="main__buttons__button" type="button" id="decrypt">Decrypt</button>
+                <button class="main__buttons__button" type="button" id="copy">Copy</button>
             </div>
         </form>            
         <aside class="side__container">
